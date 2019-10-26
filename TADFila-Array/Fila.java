@@ -12,6 +12,18 @@ public class Fila {
 		this.endOfDLine++;
 	}
 	
+	public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}
+	
 	public Object dequeue() {
 		this.endOfDLine--;
 		return elementos[endOfDLine + 1];
