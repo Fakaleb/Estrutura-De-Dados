@@ -9,7 +9,37 @@ public class TADV {
 	public TADV() {
 		elements = new Object[10];
 	}
-	
+	public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}
 	public void insert(Object value, int place) {
 		if(this.size == elements.length) {
 			Object [] temp_elements = new Object[elements.length * 2];
