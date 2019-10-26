@@ -22,5 +22,15 @@ public class No {
 		this.proximo = proximo;
 	} 
 	
-	
+	public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}
 }//eoc
