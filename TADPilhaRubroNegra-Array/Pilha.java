@@ -8,6 +8,48 @@ public class Pilha {
 		top_Red = -1;
 		top_Black = elementos.length;
 	}
+	
+	public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}public Object enqueue() throws EFilaVazia{
+		if(tamanho == 0) {
+			throw new EFilaVazia("Tá vazia!");
+		}
+		else {
+			Object lul = start.getValor();
+			start = start.getProximo();
+			tamanho--;
+			return lul;	
+		}				
+	}
 		
 	public void push_Red(Object in) {
 		int aux = (this.elementos.length * 2) - 1;
@@ -61,7 +103,7 @@ public class Pilha {
 	
 	public Object top_Red() throws EPilhaVazia{
 		if(this.isEmpty_Red()) {
-			throw new EPilhaVazia("A pilha est� vazia");
+			throw new EPilhaVazia("A pilha está vazia");
 		}
 		else {
 			return elementos[top_Red];	
@@ -70,7 +112,7 @@ public class Pilha {
 	
 	public Object top_Black() throws EPilhaVazia{
 		if(this.isEmpty_Black()) {
-			throw new EPilhaVazia("A pilha est� vazia");
+			throw new EPilhaVazia("A pilha está vazia");
 		}
 		else {
 			return elementos[top_Black];
@@ -79,7 +121,7 @@ public class Pilha {
 	
 	public Object pop_Red() throws EPilhaVazia{
 		if(this.isEmpty_Red()) {
-			throw new EPilhaVazia("A pilha est� vazia!");
+			throw new EPilhaVazia("A pilha está vazia!");
 		}
 		else {
 			Object e = elementos[top_Red];
@@ -90,7 +132,7 @@ public class Pilha {
 	
 	public Object pop_Black() throws EPilhaVazia{
 		if(this.isEmpty_Black()) {
-			throw new EPilhaVazia("A pilha est� vazia!");
+			throw new EPilhaVazia("A pilha está vazia!");
 		}
 		else {
 			Object e = elementos[top_Black];
